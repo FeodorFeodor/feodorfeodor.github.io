@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('compassform').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission and page refresh
+
+      // Get the value of the textarea
+      var textareaValue = document.getElementById('compassdashboardcopypaste').value;
+
+      // Call the function and pass the textarea value
+      processTextArea(textareaValue);
+  });
+
+  // Function to process the textarea value
+  function processTextArea(value) {
+   let regex = /(([^\s]+)|([^\s]+)\s+[0-9])\:\s+(.*)((?:[^\n][\n]?)+)/gm;
+   updatedvalue = value.match(regex);
+   document.getElementById("Tasks").innerHTML = updatedvalue;
+   const tasklenght = String(updatedvalue).length
+   
+   
+  
+
+    
+      // Do whatever you want with the textarea value here
+      //Regular expressions could be usefull for this area: (([^\s]+)|([^\s]+)\s+[0-9])\:\s+(.*)((?:[^\n][\n]?)+)
+      // You can perform additional actions or send the data to the server, etc.
+  }
+  });
+
+
+</script>
+
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.main {
+  padding: 15px;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.navbar a {
+  float: relative;
+  width: 25%;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-left {
+  float: left;
+}
+
+.navbar-right{
+  float: right;
+}
+
+.navbar a:hover {
+  background: #610161;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #800080;
+  color: white;
+}
+
+
+.navbar-center{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+input[type=textarea], select {
+  width: 35vh;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 35vh;
+  background-color: #800080;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #610161;
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  height: 51vh;
+  width: 37vh;
+}
+
+.edubox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  padding-bottom: 15px;
+  height: var(tasklenght) + 100px;
+  width: 37vh;
+}
+
+.edutextbox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  height: var(tasklenght);
+  width: 32vh;
+  text-align: left;
+}
+
+.heading {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 37vh;
+  font-weight: bold;
+}
+
+.formreset {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #800080;
+  padding: 10px;
+  width: 35vh;
+  font-weight: bold;
+}
+
+.formreset:hover{
+  background-color: #610161;
+}
+</style>
+
+
+</head>
+<body>
+<script src="https://kit.fontawesome.com/16d03058d7.js" crossorigin="anonymous"></script>
+
+
+
+<div class = 'main'>
+
+<div class = "heading" >
+  <h1>COMPASS DASHBOARD ORGANIZER</h1>
+</div>
+
+<br>
+
+<div class = "form">
+  <form id = "compassform">
+    <input id="compassdashboardcopypaste" type="textarea"name="dashboard" placeholder="Paste compass dashboard...">
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+  function compassformreset() {
+    document.getElementById("compassform").reset();
+  }
+  </script>
+  <button onclick="Tasks.innerText = '',compassformreset()" value="Reset form" class = "formreset">
+    <i class="fa-solid fa-rotate-right" style="color: #ffffff;"></i>
+  </button>
+</div>
+
+<br>
+
+<div class = "edubox">
+  <h2>Tasks:</h2>
+  <div class = "edutextbox">
+    <pr id = "Tasks"></pr>
+  </div>
+</div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="navbar">
+  <a class = "navbar-left" href="education.html"><i class="fa-solid fa-school" style="color: #ffffff;"></i></a>
+  <a class = "navbar-center" href="home.html" class="active"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+  <a class = "navbar-right" href="cooking.html"><i class="fa-solid fa-utensils" style="color: #ffffff;"></i></a>
+</div>
+
+
+
+
+</body>
+
+
+</html>

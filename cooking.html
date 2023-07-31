@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.main {
+  padding: 15px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.navbar a {
+  float: relative;
+  width: 25%;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-left {
+  float: left;
+}
+
+.navbar-right{
+  float: right;
+}
+
+.navbar a:hover {
+  background: #800080;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #800080;
+  color: white;
+}
+
+
+.navbar-center{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.cookbox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  padding-bottom: 15px;
+  height: var(tasklenght) + 100px;
+  width: 37vh;
+}
+
+.cooktextbox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  height: var(tasklenght);
+  width: 32vh;
+  text-align: left;
+}
+
+.heading {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 37vh;
+  font-weight: bold;
+}
+
+.btn_lvl {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #800080;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 35vh;
+  font-weight: bold;
+  color: white;
+  height: 40px;
+}
+
+.btn_animation_open {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #800080;
+  padding: 10px;
+  width: 35vh;
+  font-weight: bold;
+  color: white;
+  animation-name: btn_lvl_ani_open;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-bottom: 5px;
+}
+
+@keyframes btn_lvl_ani_open {
+  100% {height: 600px;}
+}
+
+.form {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  height: 1850px;
+  width: 37vh;
+}
+
+
+iframe{
+  border: 5px solid #000; 
+  border-radius: 5px;
+  width: 30vh; 
+  height: 0px;
+  background-color: #ffffff;
+  animation-name: iframe_ani_open;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes iframe_ani_open {
+  100% {height: 540px;}
+}
+
+.btn_exit {
+  margin: auto;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 5px;
+  width: 20vh;
+  align-items: center;
+  font-weight: bold;
+  color:black;
+  height: 25px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<script>
+  function exit1() {
+    document.getElementById("btn_lvl1").style.display = "none";
+  }
+
+  function exit2() {
+    document.getElementById("btn_lvl2").style.display = "none";
+  }
+
+  function exit3() {
+    document.getElementById("btn_lvl3").style.display = "none";
+  }
+
+  function btn_animation_open1() {
+    var var_openfirst = true;
+    if (var_openfirst === true) {
+    var element = document.getElementById("btn_lvl1");
+    element.classList.toggle("btn_animation_open");
+    var iframeHTML = '<button class="btn_exit" onclick=exit1()>Exit</button><iframe src="lvl1.html"></iframe>';
+    btn_lvl1.innerHTML = iframeHTML;
+    var_openfirst = false;
+    }
+  }
+
+function btn_animation_open2() {
+  var var_openfirst = true;
+  var element = document.getElementById("btn_lvl2");
+  element.classList.toggle("btn_animation_open");
+  var iframeHTML = '<button class="btn_exit" onclick=exit2()>Exit</button><iframe src="lvl2.html"></iframe>';
+  btn_lvl2.innerHTML = iframeHTML;
+  var_openfirst = false;
+}
+
+function btn_animation_open3() {
+  var var_openfirst = true;
+  var element = document.getElementById("btn_lvl3");
+  element.classList.toggle("btn_animation_open");
+  var iframeHTML = '<button class="btn_exit" onclick=exit3()>Exit</button><iframe src="lvl3.html"></iframe>';
+  btn_lvl3.innerHTML = iframeHTML;
+  var_openfirst = false;
+}
+
+</script>
+
+<div class="main">
+<div id="form" class="form">
+  <button id = "btn_lvl1" class="btn_lvl" onclick="btn_animation_open1()">Level 1 🍳</button>
+  <button id = "btn_lvl2" class="btn_lvl" onclick="btn_animation_open2()">Level 2 🧀</button>
+  <button id = "btn_lvl3" class="btn_lvl" onclick="btn_animation_open3()">Level 3 🍝</button>
+</div>
+
+</div>
+<script src="https://kit.fontawesome.com/16d03058d7.js" crossorigin="anonymous"></script>
+<div class="navbar">
+  <a class = "navbar-left" href="education.html"><i class="fa-solid fa-school" style="color: #ffffff;"></i></a>
+  <a class = "navbar-center" href="home.html" class="active"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+  <a class = "navbar-right" href="cooking.html"><i class="fa-solid fa-utensils" style="color: #ffffff;"></i></a>
+</div>
+
+
+</body>
+
+
+</html>

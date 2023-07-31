@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.main {
+  padding: 15px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.navbar a {
+  float: relative;
+  width: 25%;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-left {
+  float: left;
+}
+
+.navbar-right{
+  float: right;
+}
+
+.navbar a:hover {
+  background: #800080;
+  color: black;
+}
+
+
+
+.navbar-center{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homebox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  padding-bottom: 15px;
+  height: var(tasklenght) + 100px;
+  width: 37vh;
+}
+
+.hometextbox {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  height: var(tasklenght);
+  width: 32vh;
+  text-align: center;
+}
+
+.heading {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 37vh;
+  font-weight: bold;
+}
+
+
+</style>
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<script src="https://kit.fontawesome.com/16d03058d7.js" crossorigin="anonymous"></script>
+<script src="home.js"></script>
+<div class = 'main'></div>
+
+<div class = "heading" >
+  <h1>Mr.White Education</h1>
+</div>
+
+<br>
+
+<div class = "homebox">
+  <div class = "hometextbox">
+    <p>
+      <h2>Overview:</h2>
+      MR WHITE EDUCATION is an app where users can paste dashboards of lessons from compass and the app will sort it, make a checklist of tasks, sort through worksheet and give materials such as YouTube videos to help students understand their TASKS!
+      Furthermore, it will have lessons on COOKING!
+      It has a close resemblance to things you would be able to find on google, however it's centralized for easy use and the education will make it very easy for YOU to improve your knowledge. Thus, improving YOUR ability to chase YOUR goals!
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class = "homebox">
+  <h3>Creator: Feodor I</h4>
+  <img src="biocreator.png">
+</div>
+
+<br>
+
+<div class="navbar">
+  <a class = "navbar-left" href="education.html"><i class="fa-solid fa-school" style="color: #ffffff;"></i></a>
+  <a class = "navbar-center" href="home.html" class="active"><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+  <a class = "navbar-right" href="cooking.html"><i class="fa-solid fa-utensils" style="color: #ffffff;"></i></a>
+</div>
+
+</div>
+
+</body>
+
+
+</html>
