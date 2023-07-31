@@ -2,7 +2,7 @@
     "name": "Mr.White Education",
     "short_name": "MWE",
     "start_url": ".",
-    "theme_color": "800080",
+    "theme_color": "#800080",
     "background_color": "#ffffff",
     "display": "standalone",
     "icons":[
