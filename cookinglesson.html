@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    background-color: #800080;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.textbox {
+  border-radius: 5px;
+  background-color: #ffffff;
+  height: 490px;
+  text-align: left;
+}
+button {
+  background-color: #800080;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.btn_quiz{
+  background-color: #800080;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px
+}
+</style>
+
+<script>
+    var step = 1;
+    function hideall() {
+        document.getElementById("lesson2").style.display = "none";
+        document.getElementById("lesson3").style.display = "none";
+        document.getElementById("lesson4").style.display = "none";
+        document.getElementById("lesson5").style.display = "none";
+        document.getElementById("lesson6").style.display = "none";
+        document.getElementById("complete").style.display = "none";
+    }
+    function nextstep() {
+        if (step === 1) {
+            document.getElementById("lesson1").style.display = "none";
+            window.scrollTo(0,0);
+            document.getElementById("lesson2").style.display = "block";
+        } else if (step === 2) {
+            document.getElementById("lesson2").style.display = "none";
+            window.scrollTo(0,0);
+            document.getElementById("lesson3").style.display = "block";
+        } else if (step === 3) {
+            document.getElementById("lesson3").style.display = "none";
+            window.scrollTo(0,0);
+            document.getElementById("lesson4").style.display = "block";
+        } else if (step === 4) {
+            document.getElementById("lesson4").style.display = "none";
+            window.scrollTo(0,0);
+            document.getElementById("lesson5").style.display = "block";
+        } else if (step === 5) {
+            document.getElementById("lesson5").style.display = "none";
+            window.scrollTo(0,0);
+            document.getElementById("lesson6").style.display = "block";
+        }
+        step += 1;
+    }
+    function correct(){
+        alert("Correct!")
+    }
+
+    function incorrect(){
+        alert("Incorrect!")
+    }
+
+    function complete(){
+        document.getElementById("lesson6").style.display = "none";
+        window.scrollTo(0,0);
+        document.getElementById("complete").style.display = "block";
+    }
+</script>
+
+</head>
+<body onload=hideall();>
+<div class="textbox">
+    <div id="lesson1">
+    <h1>Introduction to Cooking</h1>
+    <h4>Cooking is the art of preparing food by using heat. It is a process that has been around for centuries, and it is one of the most important skills that anyone can learn. Cooking can be a fun and rewarding hobby, and it can also be a way to save money and eat healthier.</h4>
+    <p>
+        There are many different cooking techniques, and each one has its own unique flavor and texture. Some of the most common cooking techniques include:
+        <ul><li>Boiling: This is a simple cooking method that involves submerging food in boiling water. Boiling is a good way to cook vegetables, pasta, and eggs.</li>
+            <li>Frying: This is a cooking method that involves cooking food in hot oil. Frying can be used to cook a variety of foods, including meats, vegetables, and pastries.</li>
+            <li>Roasting: This is a cooking method that involves cooking food in an oven. Roasting is a good way to cook meats, vegetables, and whole chickens.</li>
+            <li>Sautéing: This is a cooking method that involves cooking food in a pan over medium heat. Sautéing is a good way to cook vegetables, meats, and seafood.</li>
+            <li>Baking: This is a cooking method that involves cooking food in an oven. Baking is a good way to cook cakes, breads, and pastries.</li></ul>
+        In addition to these basic cooking techniques, there are also a number of more advanced techniques, such as braising, grilling, and steaming. With a little practice, you can learn to master these techniques and create delicious and impressive dishes.
+    </p>
+    <button onclick=nextstep()>Next ▶</button>
+    </div>
+
+    <div id="lesson2">
+        <h1>Introduction to Cooking</h1>
+        <h4>No matter what your skill level, there are a few basic principles that every cook should know.</h4>
+        <p>
+            These principles include:
+            <ul>
+                <li>Use fresh ingredients: Fresh ingredients always taste better than frozen or canned ingredients.</li>
+                <li>Season your food: Seasoning is essential for bringing out the flavor of food.</li>
+                <li>Don't overcook your food: Overcooked food is dry and tasteless.</li>
+                <li>Have fun: Cooking should be enjoyable!</li>
+            </ul>
+            Here are some additional tips for beginners:
+            <ul>
+                <li>Start with simple recipes. There is no need to try to make a complicated dish when you are just starting out.</li>
+                <li>Read the recipe carefully before you start cooking. This will help you understand the steps involved and make sure that you have all of the ingredients.</li>
+                <li>Don't be afraid to experiment. Cooking is a creative process, so don't be afraid to try new things.</li>
+            </ul>
+        </p>
+        <button onclick=nextstep()>Next ▶</button>
+    </div>
+
+    <div id="lesson3">
+        <h1>Introduction to Cooking</h1>
+        <h4>Learning Point 1: Boiling Water</h4>
+        <p>
+            Ingredients:
+            <ul>
+                <li>1 pot</li>
+                <li>1 lid</li>
+                <li>Fresh cold tap water</li>   
+            </ul>
+            Instructions:
+            <ol>
+                <li>Choose a pot with a greater volume than the amount of water you plan to boil.</li>
+                <li>Pour fresh cold tap water into the pot. Make sure there's at least 3 inches of space between the rim of the pot and the surface of the water.</li>
+                <li>Turn the burner to high place the pot on the burner.</li>
+                <li>Cover the pot with a lid that fits snugly. This keeps in the heat and helps the water boil faster.</li>
+                <li>They say a watched pot never boils, but it actually does. Just be patient and let the water come to a boil.</li>
+                <li>Once the water is boiling, let it boil for 1-3 minutes. This will kill any harmfol bacteria in the water.</li>
+                <li>Remove the pot from the heat and let the water cool slightly before using.</li>
+            </ol>
+        </p>
+        <button onclick=nextstep()>Next ▶</button>
+    </div>
+
+    <div id="lesson4">
+        <h1>Introduction to Cooking</h1>
+        <h4>Learning Point 1.5: Boiling Water Quiz</h4>
+        <p>
+            <h5>What is the first step in boiling water?</h5>
+            <button class="btn_quiz" onclick="incorrect()"> A. Pouring water into the pot</button> <br>
+            <button class="btn_quiz" onclick="correct()"> B. Turning on the burner</button><br>
+            <button class="btn_quiz" onclick="incorrect()"> C. Covering the pot with a lid</button><br>
+        </p>
+        <button onclick=nextstep()>Next ▶</button>
+    </div>
+
+    <div id="lesson5">
+        <h1>Introduction to Cooking</h1>
+        <h4>Learning Point 2: Frying</h4>
+        Frying: This is a cooking method that involves cooking food in hot oil. Frying can be used to cook a variety of foods, including meats, vegetables, and pastries.
+        <ul>
+            <li>Patties</li>
+            <li>Egg</li>
+            <li>Breadcrumbs</li>
+            <li>Oil for frying</li>
+            <li>Salt and pepper to taste</li> 
+        </ul>
+        Instructions:
+        <ol>
+            <li>Heat some oil in a pan over medium heat.</li>
+            <li>Dip the patties in beaten egg, then coat them in breadcrumbs.</li>
+            <li>Fry the patties for 2-3 minutes per side, or until they are golden brown and cooked through.</li>
+            <li>Drain the patties on paper towels to remove excess oil.</li>
+            <li>Season the patties with salt and pepper to taste.</li>
+        </ol>
+        Tips:
+        <ul>
+            <li>Use a neutral-flavored oil, such as vegetable oil or canola oil.</li>
+            <li>Don't overcrowd the pan, or the temperature of the oil will drop and the patties will not cook evenly.</li>
+            <li>Flip the patties halfway through cooking.</li>
+            <li>Drain the patties on paper towels to remove excess oil.</li>
+            <li>Serve the patties hot with your favorite toppings.</li>
+        </ul>
+        <button onclick=nextstep()>Next ▶</button>
+    </div>
+
+    <div id="lesson6">
+        <h1>Introduction to Cooking</h1>
+        <h4>Learning Point 2.5: Frying Quiz</h4>
+        <p>
+            <h5>What is the first step in frying patties?</h5>
+            <button class="btn_quiz" onclick="incorrect()">A. Coat the patties in breadcrumbs</button> <br>
+            <button class="btn_quiz" onclick="incorrect()">B. Dip the patties in beaten egg</button><br>
+            <button class="btn_quiz" onclick="correct()">C. Heat some oil in a pan over medium heat</button><br>
+        </p>
+        <button onclick="complete()">COMPLETE!</button>
+    </div>
+
+    <div id="complete">
+        <h1>Introduction to Cooking Milestone</h1>
+        <h4>Congratulations on completing the first part of your cooking journey!</h4>
+    </div>
+</div>
+</body>
+
+</html>
